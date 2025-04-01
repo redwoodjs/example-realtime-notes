@@ -1,6 +1,8 @@
 # Node modules
 node_modules
 
+.wrangler
+
 # Logs
 logs
 *.log
