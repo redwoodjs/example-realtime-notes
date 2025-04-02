@@ -16,14 +16,9 @@
     "clean": "pnpm clean:vite && pnpm clean:vendor",
     "clean:vite": "rm -rf ./node_modules/.vite",
     "clean:vendor": "rm -rf ./vendor/dist",
-    "release": "pnpm clean && pnpm generate && pnpm build && wrangler deploy",
-    "generate": "npx prisma generate",
+    "release": "pnpm clean && pnpm build && wrangler deploy",
     "format": "prettier --write ./src",
-    "migrate:dev": "pnpm generate && wrangler d1 migrations apply DB --local",
-    "migrate:prd": "wrangler d1 migrations apply DB --remote",
-    "migrate:new": "rw-scripts migrate-new",
-    "seed": "pnpm worker:run ./src/scripts/seed.ts",
-    "check": "pnpm generate && pnpm types",
+    "check": "pnpm types",
     "types": "pnpm tsc"
   },
   "dependencies": {
