@@ -3,7 +3,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
 
   // Worker name
-  "name": "__change_me__",
+  "name": "example-realtime-notes",
 
   // Entry point
   "main": "src/worker.tsx",
@@ -38,7 +38,7 @@
 
   // Environment variables
   "vars": {
-    "APP_NAME": "__change_me__",
+    "APP_NAME": "example-realtime-notes",
   },
 
   // Migrations configuration
@@ -46,15 +46,6 @@
     {
       "tag": "v1",
       "new_classes": ["RealtimeDurableObject", "NoteDurableObject"],
-    },
-  ],
-
-  // D1 database configuration
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "__change_me__",
-      "database_id": "__change_me__",
     },
   ],
 }
