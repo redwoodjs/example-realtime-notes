@@ -105,6 +105,6 @@ Registration is protected using [Cloudflare Turnstile](https://www.cloudflare.co
 
 ## Further Reading
 
-- [RedwoodJS Documentation](https://redwoodjs.com)
+- [RedwoodSDK Documentation](https://docs.rwsdk.com/)
 - [Cloudflare Workers Secrets](https://developers.cloudflare.com/workers/runtime-apis/secrets/)
 - [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/)
