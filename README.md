@@ -2,6 +2,8 @@
 
 An example usage of RedwoodSDK's realtime APl for a collaborative note-taking webapp
 
+Test.
+
 ## Running the dev server
 
 ```shell
