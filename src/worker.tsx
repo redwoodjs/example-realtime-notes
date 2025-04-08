@@ -8,6 +8,7 @@ import {
   colors,
   animals,
 } from "unique-names-generator";
+import { env } from "cloudflare:workers";
 
 import {
   renderRealtimeClients,
@@ -20,10 +21,10 @@ export { NoteDurableObject } from "@/noteDurableObject";
 
 export type AppContext = {};
 
-export default defineApp<AppContext>([
+export default defineApp([
   setCommonHeaders(),
-  realtimeRoute((env) => env.REALTIME_DURABLE_OBJECT),
-  route("/api/note/:key", async ({ request, env, params }) => {
+  realtimeRoute(() => env.REALTIME_DURABLE_OBJECT),
+  route("/api/note/:key", async ({ request, params }) => {
     if (request.method !== "POST") {
       return new Response(null, { status: 405 });
     }
