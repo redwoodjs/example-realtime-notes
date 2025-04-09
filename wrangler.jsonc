@@ -14,12 +14,12 @@
 
   // Assets configuration
   "assets": {
-    "binding": "ASSETS",
+    "binding": "ASSETS"
   },
 
   // Observability settings
   "observability": {
-    "enabled": true,
+    "enabled": true
   },
 
   // Durable Objects configuration
@@ -27,25 +27,25 @@
     "bindings": [
       {
         "name": "REALTIME_DURABLE_OBJECT",
-        "class_name": "RealtimeDurableObject",
+        "class_name": "RealtimeDurableObject"
       },
       {
         "name": "NOTE_DURABLE_OBJECT",
-        "class_name": "NoteDurableObject",
-      },
-    ],
+        "class_name": "NoteDurableObject"
+      }
+    ]
   },
 
   // Environment variables
   "vars": {
-    "APP_NAME": "example-realtime-notes",
+    "APP_NAME": "example-realtime-notes"
   },
 
   // Migrations configuration
   "migrations": [
     {
       "tag": "v1",
-      "new_classes": ["RealtimeDurableObject", "NoteDurableObject"],
-    },
-  ],
+      "new_sqlite_classes": ["RealtimeDurableObject", "NoteDurableObject"]
+    }
+  ]
 }
