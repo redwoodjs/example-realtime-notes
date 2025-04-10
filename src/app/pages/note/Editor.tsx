@@ -4,11 +4,12 @@ import debounce from "lodash/debounce";
 import { updateContent } from "./functions";
 
 export const Editor = ({
-  props,
+  noteKey,
+  initialContent,
 }: {
-  props: { initialContent: string; key: string };
+  noteKey: string;
+  initialContent: string;
 }) => {
-  const { key, initialContent } = props;
   const [content, setContent] = useState(initialContent);
 
   // Always take the latest version from the server
@@ -19,12 +20,12 @@ export const Editor = ({
   const debouncedUpdate = useCallback(
     debounce(async (newContent: string) => {
       try {
-        await updateContent(key, newContent);
+        await updateContent(noteKey, newContent);
       } catch (error) {
         console.error("Error updating content:", error);
       }
     }, 100),
-    [],
+    []
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
