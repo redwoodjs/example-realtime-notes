@@ -5,7 +5,7 @@ import { RequestInfo } from "@redwoodjs/sdk/worker";
 const Note = async ({ params }: RequestInfo<{ key: string }>) => {
   const key = params.key;
   const content = await getContent(key);
-  return <Editor props={{ initialContent: content, key }} />;
+  return <Editor noteKey={key} initialContent={content} />;
 };
 
 export default Note;
