@@ -1,5 +1,5 @@
-import { defineApp } from "@redwoodjs/sdk/worker";
-import { route, render } from "@redwoodjs/sdk/router";
+import { defineApp } from "rwsdk/worker";
+import { route, render } from "rwsdk/router";
 import { Document } from "@/app/Document";
 import { setCommonHeaders } from "@/app/headers";
 import {
@@ -10,13 +10,10 @@ import {
 } from "unique-names-generator";
 import { env } from "cloudflare:workers";
 
-import {
-  renderRealtimeClients,
-  realtimeRoute,
-} from "@redwoodjs/sdk/realtime/worker";
+import { renderRealtimeClients, realtimeRoute } from "rwsdk/realtime/worker";
 import Note from "./app/pages/note/Note";
 
-export { RealtimeDurableObject } from "@redwoodjs/sdk/realtime/durableObject";
+export { RealtimeDurableObject } from "rwsdk/realtime/durableObject";
 export { NoteDurableObject } from "@/noteDurableObject";
 
 export type AppContext = {};

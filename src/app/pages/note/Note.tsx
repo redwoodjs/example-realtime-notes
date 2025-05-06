@@ -1,6 +1,6 @@
 import { Editor } from "./Editor";
 import { getContent } from "./functions";
-import { RequestInfo } from "@redwoodjs/sdk/worker";
+import { RequestInfo } from "rwsdk/worker";
 
 const Note = async ({ params }: RequestInfo<{ key: string }>) => {
   const key = params.key;
