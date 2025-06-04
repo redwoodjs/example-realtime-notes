@@ -23,7 +23,7 @@
     "types": "tsc"
   },
   "dependencies": {
-    "rwsdk": "0.0.80",
+    "rwsdk": "0.1.0-alpha.2",
     "@simplewebauthn/browser": "^13.1.0",
     "@simplewebauthn/server": "^13.1.1",
     "lodash": "^4.17.21",
